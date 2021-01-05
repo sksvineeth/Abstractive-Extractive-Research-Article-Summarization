@@ -1,1 +1,1 @@
-# sksvineeth-Abstractive-Extractive-Research-Article-Summarization
+# Abstractive and Extractive Research Article Summarization
