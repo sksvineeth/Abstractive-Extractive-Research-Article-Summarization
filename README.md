@@ -7,9 +7,9 @@
 As a research student, I spend most of my time in a literature survey before diving into a solution. Most of the time I either deviate towards an off-topic or spend hours maneuvering over journals delaying the work. This motivated me to work on the Research Paper Text Summarization tool for my #NLP Class project. The aim is to optimize the time spent on research papers by academics during their research work by providing them concise and informative summaries of papers.
 
 ## Background
-The main problem relating to text summarization arises from the severe lack of labeled training data. This hurdle has been overcome through this academic research paper: “A Supervised Approach to Extractive Summarisation of Scientific Papers” [1]. They give us a way to mine scientific papers and also create preliminary summaries that can be used as training data. Furthermore, they proposed multiple methods, both analytical and empirical to create text summaries using everything from scoring sentences based on word overlap to advanced methods such as Recurrent Neural Networks and LSTMs. This paper was the basis for the first half of our project, where we explored extractive methods to generate summaries.
+The main problem relating to text summarization arises from the severe lack of labeled training data. This hurdle has been overcome through this academic research paper: “A Supervised Approach to Extractive Summarisation of Scientific Papers” [1]. They give us a way to mine scientific papers and also create preliminary summaries that can be used as training data. Furthermore, they proposed multiple methods, both analytical and empirical to create text summaries using everything from scoring sentences based on word overlap to advanced methods such as Recurrent Neural Networks and LSTMs. This paper was the basis for the first half of our project, where I explored extractive methods to generate summaries.
 
-Recurrent Neural Networks (RNNs), while not cutting edge, form the backbone of text generation today. RNNs help deal with the sequential nature of text while also accounting for the dependencies words have on each other [5]. However, they do not account for long term dependencies between words in text. Long Short Term Memory(LSTM) units overcome this by providing an attention mechanism to remember previous words in the passage. This allows for text to be generated from longer, more natural sentences and account for the contextual nature of words. This is the concept used in the second half of our project where we worked on generating summaries using abstractive methods.
+Recurrent Neural Networks (RNNs), while not cutting edge, form the backbone of text generation today. RNNs help deal with the sequential nature of text while also accounting for the dependencies words have on each other [5]. However, they do not account for long term dependencies between words in text. Long Short Term Memory(LSTM) units overcome this by providing an attention mechanism to remember previous words in the passage. This allows for text to be generated from longer, more natural sentences and account for the contextual nature of words. This is the concept used in the second half of our project where I worked on generating summaries using abstractive methods.
 
 The state of the art in today’s Natural Language Processing landscape is the use of Transformers namely BERT(Google) [7], GPT-2(OpenAI), et cetera. These improve upon the  by    LSTM concept of attention by using words that occur before and after a certain word. While our system does not compare with the state of the art today, they give a good idea of the differences between extractive and abstractive summarization methods. Implementing transformers is considered to be future work.
 
@@ -27,7 +27,7 @@ With the data from Science Direct paper which are well labeled sectionwise, I  u
 ```
 #### Author Generated Highlights
 ```
-['We quantified the effect of four wrist postures during tapping on resulting finger and wrist muscle stress (including both active and passive component)',
+[' Quantified the effect of four wrist postures during tapping on resulting finger and wrist muscle stress (including both active and passive component)',
  ' Neutral wrist posture was the optimal option among four tested wrist postures when all muscles were considered',
  ' Extensor muscles exhibited higher muscle stresses than flexors',
  ' Wrist extensors stress remained higher than 4',
@@ -35,7 +35,7 @@ With the data from Science Direct paper which are well labeled sectionwise, I  u
  ]
 ```
 #### Rogue Scores for Extractive Model
-We used ROUGE scores to quantify our results. 
+Used ROUGE scores to quantify our results. 
 ```
 {'rouge-1': {'f': 0.2093023206246621,
    'p': 0.23076923076923078,
